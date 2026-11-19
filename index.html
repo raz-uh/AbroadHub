@@ -1,0 +1,295 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#f5f7f2" />
+    <meta
+      name="description"
+      content="Explore study destinations, estimate costs in NPR, and organize your Nepal study-abroad documents with Abroad Hub."
+    />
+    <title>Abroad Hub — Your study plan, in one place</title>
+    <link rel="canonical" href="https://www.abroadhub.example/" />
+    <link rel="icon" href="./favicon.ico" sizes="16x16 32x32 48x48" />
+    <link rel="icon" type="image/svg+xml" href="./icon.svg" />
+    <link rel="apple-touch-icon" sizes="180x180" href="./apple-touch-icon.png" />
+    <link rel="manifest" href="./site.webmanifest" />
+    <link rel="stylesheet" href="./styles.css" />
+    <meta property="og:type" content="website" />
+    <meta property="og:locale" content="en_NP" />
+    <meta property="og:site_name" content="Abroad Hub" />
+    <meta property="og:title" content="Abroad Hub — Your study plan, in one place" />
+    <meta property="og:description" content="Explore study destinations, estimate costs in NPR, and organize your Nepal study-abroad documents." />
+    <meta property="og:url" content="https://www.abroadhub.example/" />
+    <meta property="og:image" content="https://www.abroadhub.example/share-image.png" />
+    <meta property="og:image:secure_url" content="https://www.abroadhub.example/share-image.png" />
+    <meta property="og:image:type" content="image/png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content="Abroad Hub — a clearer path to studying abroad, made for students planning from Nepal." />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Abroad Hub — Your study plan, in one place" />
+    <meta name="twitter:description" content="Explore study destinations, estimate costs in NPR, and organize your Nepal study-abroad documents." />
+    <meta name="twitter:image" content="https://www.abroadhub.example/share-image.png" />
+    <meta name="twitter:image:alt" content="Abroad Hub — a clearer path to studying abroad, made for students planning from Nepal." />
+    <script type="module" src="./src/main.js"></script>
+  </head>
+  <body>
+    <header class="site-header">
+      <a class="brand" href="#" aria-label="Abroad Hub home">
+        <span class="brand-mark" aria-hidden="true">a<span>.</span></span>
+        <span>abroad<span class="brand-light">hub</span></span>
+      </a>
+      <nav class="main-nav" aria-label="Main navigation">
+        <a href="#planner">Cost planner</a>
+        <a href="#checklist">Checklists</a>
+        <a href="#how-it-works">How it works</a>
+      </nav>
+      <a class="header-cta" href="#checklist">Start planning <span aria-hidden="true">↗</span></a>
+    </header>
+
+    <main>
+      <section class="hero page-wrap" aria-labelledby="hero-title">
+        <div class="hero-copy">
+          <div class="eyebrow"><span class="eyebrow-dot"></span> MADE FOR YOUR NEXT CHAPTER</div>
+          <h1 id="hero-title">A clearer path<br />to <span>studying abroad.</span></h1>
+          <p class="hero-description">
+            Know what to budget. Keep your documents in order. Take the next step with a little more confidence.
+          </p>
+          <div class="hero-actions">
+            <a class="button button-dark" href="#planner">Plan your budget <span aria-hidden="true">↗</span></a>
+            <a class="text-link" href="#checklist">Explore checklists <span aria-hidden="true">↓</span></a>
+          </div>
+          <div class="hero-note">
+            <span class="note-icon" aria-hidden="true">✳</span>
+            <span>Built for students planning from Nepal</span>
+          </div>
+        </div>
+        <div class="hero-art" aria-label="Illustration of a student planning their journey">
+          <div class="art-sun"></div>
+          <div class="art-orbit orbit-one"></div>
+          <div class="art-orbit orbit-two"></div>
+          <div class="art-card card-top">
+            <span class="art-card-icon">✈</span>
+            <span><strong>Your next stop</strong><small>Somewhere new</small></span>
+            <span class="card-arrow">↗</span>
+          </div>
+          <div class="art-stamp">YOUR<br />NEXT<br />CHAPTER</div>
+          <div class="art-person">
+            <div class="person-hair"></div>
+            <div class="person-head"></div>
+            <div class="person-body"></div>
+            <div class="person-bag"></div>
+          </div>
+          <div class="art-ground"></div>
+          <div class="art-card card-bottom">
+            <span class="check-icon">✓</span>
+            <span><strong>One step at a time</strong><small>You've got this.</small></span>
+          </div>
+          <div class="art-sparkle sparkle-one">✳</div>
+          <div class="art-sparkle sparkle-two">✦</div>
+        </div>
+      </section>
+
+      <section id="destinations" class="destinations-section page-wrap" aria-labelledby="destinations-title">
+        <div class="section-heading destinations-heading">
+          <div>
+            <div class="eyebrow"><span class="eyebrow-dot"></span> FIND YOUR FIT</div>
+            <h2 id="destinations-title">Where would you like to study?</h2>
+          </div>
+          <p>Search and filter destinations, compare typical costs, and switch your plan whenever you like.</p>
+        </div>
+        <div class="destination-filters">
+          <label class="destination-search">
+            <span class="visually-hidden">Search countries</span>
+            <span class="search-icon" aria-hidden="true">⌕</span>
+            <input id="country-search" type="search" placeholder="Search countries..." autocomplete="off" />
+          </label>
+          <label class="filter-field">
+            <span>Region</span>
+            <select id="region-filter" aria-label="Filter by region"></select>
+          </label>
+          <label class="filter-field">
+            <span>Study type</span>
+            <select id="study-filter" aria-label="Filter by study type"></select>
+          </label>
+        </div>
+        <div class="destination-results" id="destination-results" aria-live="polite"></div>
+        <div class="compare-bar">
+          <p id="compare-hint">Select up to 3 destinations to compare their basic cost benchmarks.</p>
+          <button id="compare-button" class="button button-dark" type="button" disabled>Compare costs <span aria-hidden="true">↗</span></button>
+        </div>
+        <div class="compare-panel" id="compare-panel" hidden></div>
+      </section>
+
+      <section id="planner" class="planner page-wrap" aria-labelledby="planner-title">
+        <div class="section-heading planner-heading">
+          <div>
+            <div class="eyebrow"><span class="eyebrow-dot"></span> <span id="planner-country-label">AUSTRALIA</span> · START WITH A PLAN</div>
+            <h2 id="planner-title">Your budget, at a glance.</h2>
+          </div>
+          <p>Get a rough picture of the first year. Change any number to match your plan.</p>
+        </div>
+        <div class="planner-card">
+          <div class="planner-fields">
+            <label class="field country-field">
+              <span>Selected destination</span>
+              <span class="select-wrap">
+                <select id="country-select" aria-label="Choose a destination country"></select>
+                <span class="select-chevron" aria-hidden="true">⌄</span>
+              </span>
+            </label>
+            <label class="field">
+              <span>Tuition · first year <span class="field-currency">NPR</span></span>
+              <input id="tuition-input" type="number" min="0" step="50000" inputmode="numeric" />
+            </label>
+            <label class="field">
+              <span>Living costs · first year <span class="field-currency">NPR</span></span>
+              <input id="living-input" type="number" min="0" step="50000" inputmode="numeric" />
+            </label>
+            <label class="field">
+              <span>Visa &amp; health cover <span class="field-currency">NPR</span></span>
+              <input id="visa-input" type="number" min="0" step="10000" inputmode="numeric" />
+            </label>
+            <label class="field">
+              <span>Travel &amp; settling in <span class="field-currency">NPR</span></span>
+              <input id="travel-input" type="number" min="0" step="10000" inputmode="numeric" />
+            </label>
+          </div>
+          <div class="estimate-result">
+            <div class="estimate-label">YOUR ROUGH FIRST-YEAR PLAN <span class="estimate-star">✳</span></div>
+            <div class="estimate-total" id="estimate-total" aria-live="polite">NPR 0</div>
+            <div class="estimate-caption">An editable starting point, not a quote or official requirement.</div>
+            <a href="#checklist" class="result-link">Build your checklist <span aria-hidden="true">↗</span></a>
+          </div>
+          <p class="planner-disclaimer">
+            <span aria-hidden="true">ⓘ</span> Starter amounts are rough planning assumptions. Actual tuition, living costs,
+            exchange rates, visa charges and insurance vary; these NPR inputs are not live currency conversions.
+            <a href="https://www.nrb.org.np/forex/" target="_blank" rel="noopener noreferrer">Check Nepal Rastra Bank rates ↗</a>
+            <span class="planner-reviewed">Rate source last checked <span id="fx-review-date"></span></span>
+          </p>
+        </div>
+      </section>
+
+      <section id="country-guide" class="country-guide page-wrap" aria-labelledby="guide-title">
+        <div class="section-heading guide-heading">
+          <div>
+            <div class="eyebrow"><span class="eyebrow-dot"></span> YOUR DESTINATION GUIDE</div>
+            <h2 id="guide-title"><span id="guide-country-name">Australia</span>: process &amp; costs.</h2>
+          </div>
+          <a id="guide-official-link" class="official-guide-link" href="#" target="_blank" rel="noopener noreferrer">Open official guidance ↗</a>
+        </div>
+        <div class="guide-grid">
+          <section class="guide-panel process-panel" aria-labelledby="process-title">
+            <div class="guide-panel-title">
+              <span class="section-icon" aria-hidden="true">→</span>
+              <div><h3 id="process-title">Step-by-step process</h3><p>Typical sequence — individual requirements vary.</p></div>
+            </div>
+            <ol class="process-list" id="process-list"></ol>
+          </section>
+          <section class="guide-panel fees-panel" aria-labelledby="fees-title">
+            <div class="guide-panel-title">
+              <span class="section-icon step-icon-yellow" aria-hidden="true">NPR</span>
+              <div><h3 id="fees-title">Fees &amp; payment breakdown</h3><p>Amounts shown in the destination currency.</p></div>
+            </div>
+            <div class="fees-list" id="fees-list"></div>
+            <p class="fee-footnote">* Planning estimates or published benchmarks; they are not a quote or a guarantee of current fees. Check the linked official source before paying or applying. NPR planner values are illustrative and are not live FX conversions.</p>
+          </section>
+        </div>
+      </section>
+
+      <section id="checklist" class="checklist-section page-wrap" aria-labelledby="checklist-title">
+        <div class="section-heading checklist-heading">
+          <div>
+            <div class="eyebrow"><span class="eyebrow-dot"></span> YOUR PREP, MADE SIMPLE</div>
+            <h2 id="checklist-title">Small steps. Big destination.</h2>
+          </div>
+          <p>Choose a country, then work through the essentials. Your checked items stay saved on this device.</p>
+        </div>
+        <div class="country-switcher" role="group" aria-label="Selected country checklist">
+          <span class="current-country" id="current-country"></span>
+          <span class="checklist-progress" id="checklist-progress" aria-live="polite"></span>
+          <div class="country-data-actions">
+            <button id="export-country" class="subtle-action" type="button">Export plan ↓</button>
+            <button id="reset-country" class="subtle-action reset-action" type="button">Reset country data</button>
+          </div>
+        </div>
+        <div class="country-intro" id="country-intro"></div>
+        <div class="checklist-grid" id="checklist-grid"></div>
+        <div class="storage-notice" id="storage-notice" role="status" aria-live="polite"></div>
+      </section>
+
+      <section id="how-it-works" class="steps-section">
+        <div class="page-wrap">
+          <div class="section-heading steps-heading">
+            <div>
+              <div class="eyebrow"><span class="eyebrow-dot"></span> A LITTLE LESS OVERWHELM</div>
+              <h2>Three steps to feel more ready.</h2>
+            </div>
+          </div>
+          <div class="steps-grid">
+            <article class="step-card">
+              <span class="step-number">01</span>
+              <div class="step-icon step-icon-lilac" aria-hidden="true">◎</div>
+              <h3>Choose your destination</h3>
+              <p>Search or filter destinations, then select one to see its cost guide and checklist.</p>
+            </article>
+            <article class="step-card">
+              <span class="step-number">02</span>
+              <div class="step-icon step-icon-yellow" aria-hidden="true">↗</div>
+              <h3>Shape your budget</h3>
+              <p>Adjust the sample costs with your own tuition, living, visa and travel estimates in NPR.</p>
+            </article>
+            <article class="step-card">
+              <span class="step-number">03</span>
+              <div class="step-icon step-icon-mint" aria-hidden="true">✓</div>
+              <h3>Check things off</h3>
+              <p>Move through the steps at your pace. Your progress saves automatically in this browser.</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="disclaimer-band page-wrap" aria-label="Important information">
+        <span class="disclaimer-symbol" aria-hidden="true">!</span>
+        <div>
+          <strong>A helpful guide, not official advice.</strong>
+          <p>Visa rules, fees, funds and document requirements can change. Always confirm details with the official sources linked in each checklist and your school before making payments or submitting an application.</p>
+        </div>
+      </section>
+    </main>
+
+    <dialog id="reset-dialog" class="reset-dialog" aria-labelledby="reset-dialog-title">
+      <form method="dialog" id="reset-form">
+        <h2 id="reset-dialog-title">Reset this country?</h2>
+        <p>This clears only this country's saved checklist and budget, then restores its starter estimates. Other countries are unchanged.</p>
+        <div class="dialog-actions">
+          <button class="subtle-action" type="submit" value="cancel">Keep my data</button>
+          <button class="button button-dark" type="submit" value="reset">Reset this country</button>
+        </div>
+      </form>
+    </dialog>
+    <dialog id="export-dialog" class="export-dialog" aria-labelledby="export-dialog-title">
+      <div>
+        <h2 id="export-dialog-title">Export your <span id="export-country-name"></span> plan</h2>
+        <p>Copy this JSON summary or download it to keep a local backup. It contains your budget and checklist statuses.</p>
+        <label class="visually-hidden" for="export-json">Country plan JSON</label>
+        <textarea id="export-json" rows="12" readonly spellcheck="false"></textarea>
+        <div class="export-status" id="export-status" role="status" aria-live="polite"></div>
+        <div class="dialog-actions">
+          <button id="close-export" class="subtle-action" type="button">Close</button>
+          <button id="copy-export" class="subtle-action" type="button">Copy JSON</button>
+          <button id="download-export" class="button button-dark" type="button">Download JSON ↓</button>
+        </div>
+      </div>
+    </dialog>
+
+    <footer class="site-footer page-wrap">
+      <a class="brand footer-brand" href="#" aria-label="Abroad Hub home">
+        <span class="brand-mark" aria-hidden="true">a<span>.</span></span>
+        <span>abroad<span class="brand-light">hub</span></span>
+      </a>
+      <p>Made for the journey from here to there. <span>© <span id="current-year"></span> Abroad Hub</span></p>
+    </footer>
+  </body>
+</html>
